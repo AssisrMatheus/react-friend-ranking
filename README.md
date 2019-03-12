@@ -8,7 +8,7 @@
 # react-friend-ranking
 Rank who's your best friend!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and with typescript added following the [documentation](https://facebook.github.io/create-react-app/docs/adding-typescript).
 
 ## How to run
 
