@@ -1,9 +1,11 @@
 import React from "react";
+import "./ReactFriendRanking.scss";
+import Home from "./Components/Pages/Home";
 
 class ReactFriendRanking extends React.Component {
     public render() {
         return (
-            <p>Hello world - React friend ranking</p>
+            <Home />
         );
     }
 }
