@@ -1,1 +1,11 @@
 @import "bulma";
+
+$distance-value: 16px;
+
+.padding {
+    padding: $distance-value;
+}
+
+.margin {
+    margin: $distance-value;
+}

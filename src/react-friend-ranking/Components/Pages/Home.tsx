@@ -1,20 +1,28 @@
 import React from "react";
+import Header from "../Elements/Header/Header";
+import Friends from "../Elements/Friends/Friends";
+import { IFriend } from "../../Entities/IFriend";
 
-class Home extends React.Component {
+interface IHomeProps {
+
+}
+
+interface IHomeState {
+    friends: Array<IFriend>
+}
+
+class Home extends React.Component<IHomeProps, IHomeState> {
+    constructor(props: IHomeProps) {
+        super(props);
+        this.state = { friends: new Array<IFriend>({ name: "Joao" }) };
+    }
+
     public render() {
         return (
-            <section className="hero is-primary">
-                <div className="hero-body">
-                    <div className="container">
-                        <h1 className="title">
-                            Hello world
-                        </h1>
-                        <h2 className="subtitle">
-                            react-friend-ranking
-                        </h2>
-                    </div>
-                </div>
-            </section>
+            <React.Fragment>
+                <Header />
+                <Friends friends={this.state.friends} />
+            </React.Fragment>
         );
     }
 }
