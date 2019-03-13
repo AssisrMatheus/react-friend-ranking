@@ -11,7 +11,7 @@ interface IHomeProps {
 }
 
 interface IHomeState {
-    friends: Array<IFriend>
+    friends: Array<IFriend>;
 }
 
 class Home extends React.Component<IHomeProps, IHomeState> {
@@ -29,10 +29,26 @@ class Home extends React.Component<IHomeProps, IHomeState> {
         return (
             <div className="flex-wrapper">
                 <Header className="flex-header" />
-                <Friends className="flex-auto" friends={this.state.friends} />
+                <Friends className="flex-auto"
+                         friends={this.state.friends} 
+                         raiseFriendRank={(index: number) => { this.raiseFriendRank(index); }}
+                         lowerFriendRank={(index: number) => { this.lowerFriendRank(index); }} />
                 <Footer className="flex-footer" />
             </div>
         );
+    }
+
+    private raiseFriendRank(index: number) {
+        this.setFriends(this.store.raiseFriendRank(this.state.friends, index));
+    }
+
+    private lowerFriendRank(index: number) {
+        this.setFriends(this.store.lowerFriendRank(this.state.friends, index));
+    }
+
+    private setFriends(friends: IFriend[]): void {
+        this.store.setFriends(friends);
+        this.setState({friends});
     }
 }
 

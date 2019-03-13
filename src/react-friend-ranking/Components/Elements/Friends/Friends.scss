@@ -1,3 +1,5 @@
+@import "bulma";
+
 .friend-rank {
     text-transform: uppercase;
     font-size: 0.7em;
@@ -18,6 +20,13 @@
     }
 
     .icon {
-        cursor: pointer;
+        &.enabled {
+            cursor: pointer;
+        }
+
+        &.disabled {
+            color: $grey-lighter;
+            cursor: not-allowed;
+        }
     }
 }
