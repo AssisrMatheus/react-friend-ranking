@@ -11,8 +11,24 @@ $distance-value: 16px;
     margin: $distance-value;
 }
 
+.margin-top {
+    margin-top: $distance-value;
+}
+
+.margin-bottom {
+    margin-bottom: $distance-value;
+}
+
+.margin-left {
+    margin-left: $distance-value;
+}
+
 html,
 body,
 #root {    
     height: 100%;
+}
+
+.oi[data-glyph]:empty:before {
+    vertical-align: middle;
 }

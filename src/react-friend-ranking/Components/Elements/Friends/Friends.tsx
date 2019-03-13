@@ -1,12 +1,14 @@
 import React from "react";
 import { IFriend } from "../../../Entities/IFriend";
 import "./Friends.scss";
+import FriendForm from "../FriendForm/FriendForm";
 
 interface IFriendsProps {
     className: string;
     friends: Array<IFriend>;
     raiseFriendRank: (index: number) => void;
     lowerFriendRank: (index: number) => void;
+    onSubmit: (friend: IFriend, index: number) => void;
 }
 
 class Friends extends React.Component<IFriendsProps> {
@@ -18,6 +20,9 @@ class Friends extends React.Component<IFriendsProps> {
         return (
             <div className={"has-background-dark padding " + this.props.className}>
                 <div className="container">
+                    <div>
+                        <FriendForm maxRankNumber={this.props.friends.length + 1} onSubmit={(friend, index) => this.props.onSubmit(friend, index)} />
+                    </div>
                     <div className="columns is-mobile is-multiline">
                         {this.props.friends.map((element, index) => this.getFriendCard(element, index))}
                     </div>
