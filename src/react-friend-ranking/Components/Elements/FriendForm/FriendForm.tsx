@@ -8,7 +8,7 @@ interface IFriendFormProps {
 
 interface IFriendFormState {
     friend: IFriend,
-    index: number,
+    index?: number,
     valid: boolean | "" | undefined
 }
 
@@ -17,7 +17,6 @@ class FriendForm extends React.Component<IFriendFormProps, IFriendFormState> {
         super(props);
         this.state = {
             friend: { name: "" },
-            index: this.props.maxRankNumber,
             valid: false,
         }
     }
@@ -52,7 +51,7 @@ class FriendForm extends React.Component<IFriendFormProps, IFriendFormState> {
                                         placeholder="Rank"
                                         min="1"
                                         max={this.props.maxRankNumber}
-                                        value={this.state.index !== undefined ? this.state.index : ""}
+                                        value={this.state.index !== undefined ? this.state.index : this.props.maxRankNumber}
                                         onChange={(e) => { this.onIndexChange(e) }} />
                                     <span className="icon is-small is-left">
                                         <span className="oi" data-glyph="elevator" aria-hidden="true"></span>
@@ -81,8 +80,8 @@ class FriendForm extends React.Component<IFriendFormProps, IFriendFormState> {
 
     private submit(e: React.FormEvent<HTMLFormElement>): void {
         e.preventDefault();
-        if (this.isValid(this.state.friend, this.state.index)) {
-            this.props.onSubmit(this.state.friend, this.state.index);
+        if (this.isValid(this.state.friend, this.state.index ? this.state.index : this.props.maxRankNumber)) {
+            this.props.onSubmit(this.state.friend, this.state.index ? this.state.index : this.props.maxRankNumber);
             this.clean();
         }
     }
@@ -90,7 +89,7 @@ class FriendForm extends React.Component<IFriendFormProps, IFriendFormState> {
     private clean() {
         this.setState({
             friend: { name: "" },
-            index: this.props.maxRankNumber,
+            index: undefined,
             valid: false,
         });
     }
@@ -103,7 +102,7 @@ class FriendForm extends React.Component<IFriendFormProps, IFriendFormState> {
         const friend: IFriend = { [name]: value };
         this.setState({
             friend,
-            valid: this.isValid(friend, this.state.index)
+            valid: this.isValid(friend, this.state.index ? this.state.index : this.props.maxRankNumber)
         });
     }
 

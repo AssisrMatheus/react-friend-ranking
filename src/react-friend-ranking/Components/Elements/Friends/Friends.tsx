@@ -8,6 +8,7 @@ interface IFriendsProps {
     friends: Array<IFriend>;
     raiseFriendRank: (index: number) => void;
     lowerFriendRank: (index: number) => void;
+    removeFriend: (index: number) => void;
     onSubmit: (friend: IFriend, index: number) => void;
 }
 
@@ -63,6 +64,15 @@ class Friends extends React.Component<IFriendsProps> {
                         <div className="column">
                             <div className="friend-rank">Rank <span className="value">{index + 1}</span></div>
                             <div className="friend-name">{friend.name}</div>
+                        </div>
+                        <div className="column is-1">
+                            <div className="columns is-multiline icons is-gapless is-mobile">
+                                <div className="column is-full">
+                                    <span className="icon is-large has-text-danger enabled is-size-4" onClick={(e) => { this.props.removeFriend(index) }}>
+                                        <span className="oi" data-glyph="circle-x" title="Remove friend" aria-hidden="true"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

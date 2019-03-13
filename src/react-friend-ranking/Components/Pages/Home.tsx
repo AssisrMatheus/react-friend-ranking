@@ -32,6 +32,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
                 <Friends className="flex-auto"
                     friends={this.state.friends}
                     onSubmit={(friend, index) => { this.onSubmit(friend, index); }}
+                    removeFriend={(index: number) => { this.removeFriend(index); }}
                     raiseFriendRank={(index: number) => { this.raiseFriendRank(index); }}
                     lowerFriendRank={(index: number) => { this.lowerFriendRank(index); }} />
                 <Footer className="flex-footer" />
@@ -54,6 +55,10 @@ class Home extends React.Component<IHomeProps, IHomeState> {
 
     private onSubmit(friend: IFriend, index: number): void {
         this.setFriends(this.store.addFriend(this.state.friends, friend, index));
+    }
+
+    private removeFriend(index: number) {
+        this.setFriends(this.store.removeFriend(this.state.friends, index));
     }
 }
 

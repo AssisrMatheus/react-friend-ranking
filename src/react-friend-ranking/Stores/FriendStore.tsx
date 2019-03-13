@@ -79,7 +79,8 @@ class FriendStore {
                     // if (current)
                     //     newFriends.push(current);
                 } else if (i >= index + 1) {
-                    newFriends.push(friends[i - index]);
+                    const remove = index === 0 ? 1 : index;
+                    newFriends.push(friends[i - remove]);
                 }
             }
 
@@ -87,6 +88,12 @@ class FriendStore {
         }
 
         return new Array<IFriend>(...friends);
+    }
+
+    public removeFriend(friends: IFriend[], index: number): IFriend[] {
+        const newFriends = new Array<IFriend>(...friends);
+        newFriends.splice(index, 1);
+        return newFriends;
     }
 }
 
