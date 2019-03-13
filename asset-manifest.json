@@ -1,5 +1,5 @@
 {
-  "main.css": "/react-friend-ranking/static/css/main.80538773.chunk.css",
+  "main.css": "/react-friend-ranking/static/css/main.7a46d6c6.chunk.css",
   "main.js": "/react-friend-ranking/static/js/main.e04a3818.chunk.js",
   "main.js.map": "/react-friend-ranking/static/js/main.e04a3818.chunk.js.map",
   "runtime~main.js": "/react-friend-ranking/static/js/runtime~main.476458cf.js",
@@ -8,9 +8,9 @@
   "static/js/2.0812cd02.chunk.js": "/react-friend-ranking/static/js/2.0812cd02.chunk.js",
   "static/js/2.0812cd02.chunk.js.map": "/react-friend-ranking/static/js/2.0812cd02.chunk.js.map",
   "index.html": "/react-friend-ranking/index.html",
-  "precache-manifest.271d7492941fb3f6470fc1f50ebc672c.js": "/react-friend-ranking/precache-manifest.271d7492941fb3f6470fc1f50ebc672c.js",
+  "precache-manifest.e218c4e4fa7c6c1f985c00be0e866d76.js": "/react-friend-ranking/precache-manifest.e218c4e4fa7c6c1f985c00be0e866d76.js",
   "service-worker.js": "/react-friend-ranking/service-worker.js",
   "static/css/2.afd7336c.chunk.css.map": "/react-friend-ranking/static/css/2.afd7336c.chunk.css.map",
-  "static/css/main.80538773.chunk.css.map": "/react-friend-ranking/static/css/main.80538773.chunk.css.map",
+  "static/css/main.7a46d6c6.chunk.css.map": "/react-friend-ranking/static/css/main.7a46d6c6.chunk.css.map",
   "static/media/ReactFriendRanking.scss": "/react-friend-ranking/static/media/open-iconic.eca2c267.svg"
 }

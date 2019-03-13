@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-friend-ranking/static/media/open-iconic.3cf97837.woff"
   },
   {
-    "revision": "d77929c85cc19c654feb",
-    "url": "/react-friend-ranking/static/css/main.80538773.chunk.css"
+    "revision": "5eb073d4306496a81173",
+    "url": "/react-friend-ranking/static/css/main.7a46d6c6.chunk.css"
   },
   {
     "revision": "2fc63abcd8da1d2518ee",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-friend-ranking/static/js/2.0812cd02.chunk.js"
   },
   {
-    "revision": "d77929c85cc19c654feb",
+    "revision": "5eb073d4306496a81173",
     "url": "/react-friend-ranking/static/js/main.e04a3818.chunk.js"
   },
   {
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/react-friend-ranking/static/css/2.afd7336c.chunk.css"
   },
   {
-    "revision": "86d3cfece1312248fa2460372f7f9c78",
+    "revision": "6d7cd6ea5a7376b8caf1235e5b11643e",
     "url": "/react-friend-ranking/index.html"
   }
 ];
