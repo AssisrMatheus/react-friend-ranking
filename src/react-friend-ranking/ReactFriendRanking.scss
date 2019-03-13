@@ -1,4 +1,5 @@
 @import "bulma";
+@import "~open-iconic/font/css/open-iconic.css";
 
 $distance-value: 16px;
 
@@ -8,4 +9,10 @@ $distance-value: 16px;
 
 .margin {
     margin: $distance-value;
+}
+
+html,
+body,
+#root {    
+    height: 100%;
 }

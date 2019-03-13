@@ -1,9 +1,17 @@
 import React from "react";
 
-class Header extends React.Component {
+interface IHeaderProps {
+    className: string;
+}
+
+class Header extends React.Component<IHeaderProps> {
+    constructor(props: IHeaderProps) {
+        super(props);
+    }
+
     public render() {
         return (
-            <section className="hero is-dark is-bold">
+            <section className={"hero is-dark is-bold "+this.props.className}>
                 <div className="hero-body">
                     <div className="container">
                         <h1 className="title">
