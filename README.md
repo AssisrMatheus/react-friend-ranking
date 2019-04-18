@@ -8,7 +8,7 @@
 # react-friend-ranking
 Rank who's your best friend!
 
-## Try it out in: [http://adowtatep.github.io/react-friend-ranking](http://adowtatep.github.io/react-friend-ranking) !
+## Try it out in: [https://assisrmatheus.github.io/react-friend-ranking](https://assisrmatheus.github.io/react-friend-ranking) !
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and with typescript added following the [documentation](https://facebook.github.io/create-react-app/docs/adding-typescript).
 
